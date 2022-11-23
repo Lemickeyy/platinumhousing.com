@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(orange,white);
+}
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    transition: 0.5s ease;
+}
+header .brand{
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .navigation{
+    position: relative;
+}
+/*styling the nav elements*/
+header .navigation .nav-items a{
+    position: relative;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+/*adding the before and hover effect on links*/
+header .navigation .nav-items a:before{
+    content: '';
+    position: absolute;
+    background: white;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    top: 20px;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .nav-items a:hover:before{
+    width: 100%;
+}
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -25%;
+    cursor: pointer;
+}
+.container1 .box{
+    transform-style: preserve-3d;
+    animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: perspective(1000px) rotateX(0deg) rotate(-5deg);
+    }
+    100%
+    {
+        transform: perspective(1000px) rotateX(360deg) rotate(-5deg);
+    }
+}
+.container1 .box span{
+    position: absolute;
+    color: #fff;
+    font-size: 3.5em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0 10px;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.5) transparent);
+    transform-style: preserve-3d;
+    text-shadow: 0 5px 15px rgba(0.0,0.0,0.25);
+    transform: translateX(80%) rotateX(calc(var(--i) * 22.5deg )) translateZ(110px);
+}
+.container1 .box span i:nth-child(1){
+    font-style: initial;
+    color: #ff246f;
+}
+.container1 .box span i:nth-child(2){
+    font-style: initial;
+    color: #12b5ff;
+}
+/*start of the cards for projects page*/
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.container .card{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 50px;
+    left: 15%;
+    top: 200px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.container .card .content{
+    padding: 20px;
+    text-align:  center;
+    transform: translateY(100px);
+    opacity:  0;
+    transition: 0.5s;
+}
+.container .card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.container .card .content img{
+    width: 18.75em;
+    top: 100%;
+}
+.container .card .content h3{
+    font-size: 1.06em;
+    height: 150px;
+    color: black;
+    cursor: pointer;
+    z-index: 1;
+}

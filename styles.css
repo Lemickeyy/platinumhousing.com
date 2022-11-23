@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+/*Setting up page dimensions*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/*Designing the header*/
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    transition: 0.5s ease;
+}
+/*continued designing header parts*/
+header .brand{
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .navigation{
+    position: relative;
+}
+/*styling the nav elements*/
+header .navigation .nav-items a{
+    position: relative;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+/*adding the before and hover effect on links*/
+header .navigation .nav-items a:before{
+    content: '';
+    position: absolute;
+    background: white;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    top: 20px;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .nav-items a:hover:before{
+    width: 100%;
+}
+/*home page start*/
+section{
+    padding: 100px 20px;
+}
+/*adjusting the content forwards on*/
+.home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #2696E9;
+}
+.home:before{
+    z-index: 777;
+    content: '';
+    position: absolute;
+    background: rgba(3, 96, 251, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.home .content{
+    z-index: 888;
+    color: white;
+    width: 70%;
+    margin-top: 50px;
+    display: none;
+}
+.home .content.active{
+    display: block;
+}
+/*designing the h1 element text*/
+.home .content h1{
+    font-size: 64px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 45px;
+}
+/*styling the span element (HOME-text)*/
+.home .content h1 span{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+/*style the p element*/
+.home .content p{
+    margin-bottom: 65px;
+}
+/*a element designing*/
+.home .content a{
+    background: beige;
+    padding: 15px 35px;
+    color: #1680AC;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 3px;;
+}
+/*styles the icons for facebook instagram and twitter*/
+/*moves the icons from bottom to right and higher on the page*/
+.home .media-icons{
+    z-index: 888;
+    position: absolute;
+    display: flex;
+    right: 15px;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+.home .media-icons a{
+    color: white; 
+    font-size: 1.6em;
+    transform: 0.3s ease; /*icons move smoother when hovered with the code below*/
+}
+/*seperating the media icons*/
+.home .media-icons a:not(:last-child){
+    margin-bottom: 20px;
+}
+/*creating hover effect on the icons*/
+.home .media-icons a:hover{
+    transform: scale(1.4);
+}
+/*adjusting the video to fit on screen*/
+.home video{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*navigation for videos*/
+.slider-navigation{
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+.slider-navigation .nav-btn{
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+.slider-navigation .nav-btn.active{
+    background: #2696E9;
+}
+/*spaces out the nav circles for video sliders*/
+.slider-navigation .nav-btn:not(:last-child){
+    margin-right: 20px;
+}
+/*hover effect when changing slide*/
+.slider-navigation .nav-btn:hover{
+    transform: scale(1.3);
+}
+/*setting videos up*/
+.video-slide{
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);/*clip path selects what part of the video should be shown. Comes in play with the effect when new clip plays*/
+}
+/*when the video is active meaning it is playing on the screen*/
+.video-slide.active{
+    clip-path: circle(150% at 0 50%);/*the circle type shape opens up the new clip*/
+    transition: 1.5s ease;
+    transition-property: clip-path;/*allows the code to know that the transition if for a clip*/
+}
+/*final styling through media element of home page*/
+@media (max-width: 1040px){
+    header{
+        padding: 12px 20px;
+    }
+    section{
+        padding: 100px 20px;
+    }
+    .home .media-icons{
+        right: 15px;
+    }
+
+}

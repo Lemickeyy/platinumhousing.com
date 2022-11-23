@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    color: white;
+    list-style: none;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    transition: 0.5s ease;
+}
+header .brand{
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .navigation{
+    position: relative;
+}
+/*styling the nav elements*/
+header .navigation .nav-items a{
+    position: relative;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+/*adding the before and hover effect on links*/
+header .navigation .nav-items a:before{
+    content: '';
+    position: absolute;
+    background: white;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    top: 20px;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .nav-items a:hover:before{
+    width: 100%;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container::before{
+    content: '';
+    position: absolute;
+    height: 330px;
+    width: 330px;
+    border-radius: 50%;
+    background: linear-gradient(cyan, pink);
+    transform: translate(-490px,-150px);
+}
+.container::after{
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: linear-gradient(lightblue, coral);
+    transform: translate(490px,170px);
+}
+.container .ball-1{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #04f504;
+    transform: translate(-250px,200px);
+    position: absolute;
+}
+.container .ball-2{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #08e2ff;
+    transform: translate(-10px,-220px);
+    position: absolute;
+}
+.container .ball-3{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #ffc404;
+    transform: translate(150px,250px);
+    position: absolute;
+}
+.container .box{
+    height: 86vh;
+    width: 75%;
+    padding: 0,20px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px); /*creates the blur effect and makes it look like the box is made of glass*/
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+}
+.container .box .contains{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+    position: relative;
+    margin-top: 8%;
+    padding-left: 80px;
+}
+.container .box .contains .section{
+    position: absolute;
+    margin-top: 4.37em
+}
+.container .box .contains .section h1{
+    font-size: 4.7em;
+}
+.container .box .contains .section h3{
+    font-size: 2.25em;
+}
+.container .box .contains .section h2{
+    font-size: 1.6em;
+}
+.container .box .contains .section p{
+    margin-top: 5px;
+    font-size: 24px;
+}
+.container .box .contains .section1 img{
+    width: 600px;
+    height: auto;
+    transform: translateX(490px);
+}
+.section1 img{
+    margin-left: 550px;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%,100%{
+        transform: translateY(30px)
+    }
+    50%{
+        transform: translateY(100px)
+    }
+}

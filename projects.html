@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="P.jfif">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Platinum Housing</title>
+</head>
+<body>
+    <header>
+    <a href="index.html" class="brand">Platinum Housing</a>
+    <div class="navigation">
+        <div class="nav-items">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="explore.html">Explore</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    </header>
+    <div class="container">
+        <div class="container1">
+            <div class="box">
+                <span style="--i:1;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:2;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:3;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:4;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:5;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:6;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:7;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:8;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:9;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:10;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:11;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:12;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:13;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:14;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:15;"><i>Hover</i>  to  <i>R</i>eveal</span>
+                <span style="--i:16;"><i>Hover</i>  to  <i>R</i>eveal</span>
+            </div>
+            <!--360/16 = 22.5deg -->
+        </div>
+        <div class="card">
+            <div class="content">
+                <img src="project-condo.jpg">
+                <h3>5 floor apartments
+                    starting at $200,000
+                    Expected to be built by 
+                    2024
+                </h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <img src="prohome.jpg">
+                <h3>Modern home designs.
+                    Project is expected to be built by 2023.
+                    Starting price is $2 million.
+                </h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <img src="proapart.jpg">
+                <h3>Apartments starting at $500.
+                    Expected to be built by 
+                    this year.
+                    Contact us through our contacts for 
+                    any additional info or if wanting
+                    to purchase.
+                </h3>
+        </div>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script><!--script for the hover motion on cards-->
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400, //sets the rotation speed
+            glare: true, //sets lighting on card
+            "max-glare": 3,
+        });
+    </script>
+
+</body>
+</html>

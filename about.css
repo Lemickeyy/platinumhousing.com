@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055,#7597de);
+}
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    transition: 0.5s ease;
+}
+header .brand{
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .navigation{
+    position: relative;
+}
+/*styling the nav elements*/
+header .navigation .nav-items a{
+    position: relative;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+/*adding the before and hover effect on links*/
+header .navigation .nav-items a:before{
+    content: '';
+    position: absolute;
+    background: white;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    top: 20px;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .nav-items a:hover:before{
+    width: 100%;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before{
+    content: ''; /*helps show blend effect*/
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, lightcyan, transparent );
+    z-index: 1000;
+}
+section img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    pointer-events: none;
+}
+#text{
+    margin-left: 40px;
+    position: absolute;
+    color: white;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+#btn{
+    margin-left: 50px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 40px;
+    background: wheat;
+    color: black;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+.sec{
+    position: relative;
+    background: lightcyan;
+}
+.sec h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: magenta;
+}
+.sec p{
+    font-size: 1.4em;
+    color: magenta;
+}
